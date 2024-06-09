@@ -3,13 +3,8 @@
 #import <CaptainHook/CaptainHook.h>
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
-#import "YouTubeExtractor.h"
 #import <dlfcn.h>
 #import <rootless.h>
-#import "Controllers/RootOptionsController.h"
-#import "Controllers/PictureInPictureController.h"
-#import "Controllers/YouTubeDownloadController.h"
-#import "Controllers/ReorderPivotBarController.h"
 
 // YT Headers
 #import "YouTubeHeader/ASCollectionElement.h"
