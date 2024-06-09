@@ -90,19 +90,6 @@ static NSString *accessGroupID() {
 }
 %end
 
-%hook YTGlobalConfig
-- (BOOL)shouldForceUpgrade { return NO;}
-- (BOOL)shouldShowUpgrade { return NO;}
-- (BOOL)shouldShowUpgradeDialog { return NO;}
-%end
-
-
-%hook YTIPlayerResponse
-- (BOOL)isPlayableInBackground {
-    return YES;
-}
-%end
-
 // YouTube Premium Logo - @arichornlover & @bhackel
 
 %hook YTHeaderLogoController
@@ -141,9 +128,8 @@ static NSString *accessGroupID() {
 %end
 
 %hook YTIPlayerResponse
-
+- (BOOL)isPlayableInBackground {return YES;}
 - (BOOL)isMonetized { return NO; }
-
 %end
 
 %hook YTIPlayabilityStatus
