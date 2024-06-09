@@ -9,7 +9,7 @@
 
 
 // YouTube Premium Logo - @arichornlover & @bhackel
-%group gPremiumYouTubeLogo
+
 %hook YTHeaderLogoController
 - (void)setTopbarLogoRenderer:(YTITopbarLogoRenderer *)renderer {
     YTIIcon *iconImage = renderer.iconImage;
@@ -24,7 +24,7 @@
     return YES;
 }
 %end
-%end
+
 
 
 %hook YTVersionUtils
