@@ -3,7 +3,6 @@
 #import <CaptainHook/CaptainHook.h>
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
-#import <YouTubeExtractor/YouTubeExtractor.h>
 #import <dlfcn.h>
 #import <rootless.h>
 #import "Controllers/RootOptionsController.h"
