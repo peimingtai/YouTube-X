@@ -97,7 +97,7 @@ static NSString *accessGroupID() {
 - (BOOL)shouldShowUpgradeDialog { return NO;}
 %end
 
-%group gBackgroundPlayback
+
 %hook YTIPlayerResponse
 - (BOOL)isPlayableInBackground {
     return YES;
