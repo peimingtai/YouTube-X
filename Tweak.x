@@ -90,6 +90,20 @@ static NSString *accessGroupID() {
 }
 %end
 
+%hook YTGlobalConfig
+- (BOOL)shouldBlockUpgradeDialog { return YES;}
+- (BOOL)shouldForceUpgrade { return NO;}
+- (BOOL)shouldShowUpgrade { return NO;}
+- (BOOL)shouldShowUpgradeDialog { return NO;}
+%end
+
+%group gBackgroundPlayback
+%hook YTIPlayerResponse
+- (BOOL)isPlayableInBackground {
+    return YES;
+}
+%end
+
 // YouTube Premium Logo - @arichornlover & @bhackel
 
 %hook YTHeaderLogoController
