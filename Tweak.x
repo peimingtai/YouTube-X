@@ -90,6 +90,48 @@ static NSString *accessGroupID() {
 }
 %end
 
+// Hide Upgrade Dialog
+%hook YTGlobalConfig
+- (BOOL)shouldBlockUpgradeDialog { return YES;}
+- (BOOL)shouldForceUpgrade { return NO;}
+- (BOOL)shouldShowUpgrade { return NO;}
+- (BOOL)shouldShowUpgradeDialog { return NO;}
+%end
+
+// NOYTPremium
+%hook YTCommerceEventGroupHandler
+- (void)addEventHandlers {}
+%end
+
+%hook YTInterstitialPromoEventGroupHandler
+- (void)addEventHandlers {}
+%end
+
+%hook YTPromosheetEventGroupHandler
+- (void)addEventHandlers {}
+%end
+
+%hook YTPromoThrottleController
+- (BOOL)canShowThrottledPromo { return NO; }
+- (BOOL)canShowThrottledPromoWithFrequencyCap:(id)arg1 { return NO; }
+- (BOOL)canShowThrottledPromoWithFrequencyCaps:(id)arg1 { return NO; }
+%end
+
+%hook YTIShowFullscreenInterstitialCommand
+- (BOOL)shouldThrottleInterstitial { return YES; }
+%end
+
+%hook YTSurveyController
+- (void)showSurveyWithRenderer:(id)arg1 surveyParentResponder:(id)arg2 {}
+%end
+
+%hook YTIOfflineabilityFormat
+%new
+- (int)availabilityType { return 1; }
+%new
+- (BOOL)savedSettingShouldExpire { return NO; }
+%end
+
 // YouTube Premium Logo - @arichornlover & @bhackel
 
 %hook YTHeaderLogoController
