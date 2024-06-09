@@ -5,8 +5,10 @@
 #import <YouTubeHeader/YTISectionListRenderer.h>
 #import <YouTubeHeader/YTReelModel.h>
 #import <YouTubeHeader/YTVideoWithContextNode.h>
-#import "Tweak.h"
 
+@interface YTITopbarLogoRenderer : NSObject // Enable Premium logo - @bhackel
+@property(readonly, nonatomic) YTIIcon *iconImage;
+@end
 
 // YouTube Premium Logo - @arichornlover & @bhackel
 
