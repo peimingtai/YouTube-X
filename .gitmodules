@@ -4,7 +4,7 @@
 	branch = main
 [submodule "Tweaks/YouMute"]
 	path = Tweaks/YouMute
-	url = https://github.com/arichornlover/YouMute.git
+	url = https://github.com/PoomSmart/YouMute.git
 	branch = main
 [submodule "YouTubeHeader"]
 	path = YouTubeHeader
