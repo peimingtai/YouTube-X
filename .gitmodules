@@ -6,3 +6,9 @@
 	path = Tweaks/YouMute
 	url = https://github.com/arichornlover/YouMute.git
 	branch = main
+[submodule "YouTubeHeader"]
+	path = YouTubeHeader
+	url = https://github.com/PoomSmart/YouTubeHeader.git
+[submodule "theos"]
+	path = theos
+	url = https://github.com/theos/theos.git
